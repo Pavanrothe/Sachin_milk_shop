@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Airavat Enterprises — Contact Section & Form Styling (contact.css)
+   ========================================================================== */
+
+.contact-section {
+    background-color: var(--bg-surface);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.info-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.location-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.map-embed {
+    width: 100%;
+    min-height: 220px;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.05);
+}
+
+.info-card.clickable {
+    cursor: pointer;
+}
+
+.info-card.clickable:hover {
+    border-color: var(--color-primary-blue);
+    transform: translateX(6px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.info-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.delivery-time-box {
+    background-color: var(--color-green-tint);
+    border: 1px dashed var(--color-primary-green);
+    border-radius: var(--radius-md);
+    padding: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.clock-icon {
+    font-size: 1.8rem;
+}
+
+.delivery-time-box strong {
+    font-size: 0.95rem;
+    color: var(--color-primary-green-hover);
+}
+
+.delivery-time-box p {
+    font-size: 0.88rem;
+    color: var(--text-body);
+}
+
+.contact-form-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 1.35rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    color: var(--text-dark);
+}
+
+.required {
+    color: var(--color-danger);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem 1.1rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: var(--transition);
+    background-color: #ffffff;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.error-text {
+    font-size: 0.78rem;
+    color: var(--color-danger);
+    margin-top: 0.35rem;
+    display: none;
+}
+
+.form-group.error .form-control {
+    border-color: var(--color-danger);
+}
+
+.form-group.error .error-text {
+    display: block;
+}
+
+.form-alert {
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.35rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.form-alert.success {
+    background-color: var(--color-green-tint);
+    color: var(--color-primary-green-hover);
+    border: 1px solid var(--color-primary-green);
+}

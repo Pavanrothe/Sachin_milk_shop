@@ -1,0 +1,273 @@
+/* ==========================================================================
+   Airavat Enterprises — Strictly Shop Owner Dashboard (owner.css)
+   ========================================================================== */
+
+.owner-dashboard-section {
+    background: linear-gradient(180deg, #f0f9ff 0%, var(--bg-surface) 100%);
+    border-y: 2px solid var(--color-blue-tint);
+    padding-top: 4rem;
+}
+
+.badge-pill-admin {
+    display: inline-block;
+    padding: 0.35rem 0.95rem;
+    background-color: #fef08a;
+    color: #854d0e;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.owner-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.owner-header-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.owner-header-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.owner-header-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Stat Cards */
+.owner-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.owner-stat-card {
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.owner-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon-bg {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stat-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+/* Control Tabs */
+.owner-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.owner-tab-btn {
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius-full);
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-body);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.owner-tab-btn:hover, .owner-tab-btn.active {
+    background-color: var(--color-primary-blue);
+    color: #ffffff;
+    border-color: var(--color-primary-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Card Box Container */
+.card-box {
+    background-color: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+}
+
+.card-box-header {
+    margin-bottom: 1.75rem;
+}
+
+.card-box-header h3 {
+    font-size: 1.45rem;
+    margin-bottom: 0.2rem;
+}
+
+.card-box-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.max-w-750 {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Device File Upload Styling */
+.highlight-upload-group {
+    background-color: var(--color-blue-tint);
+    border: 2px dashed var(--color-primary-blue);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+}
+
+.highlight-upload-group label {
+    color: var(--color-primary-blue);
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.file-input-control {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Image Preview Container */
+.img-preview-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background-color: var(--bg-surface);
+    border: 1px dashed var(--border-light);
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.img-preview-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Admin Data Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.admin-table th, .admin-table td {
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: middle;
+}
+
+.admin-table th {
+    background-color: var(--bg-surface);
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.admin-table tbody tr:hover {
+    background-color: rgba(2, 132, 199, 0.03);
+}
+
+.admin-p-thumb {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.admin-p-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+}
+
+.status-badge {
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.status-pending { background-color: #fef9c3; color: #854d0e; }
+.status-processing { background-color: var(--color-blue-tint); color: var(--color-primary-blue); }
+.status-delivered { background-color: var(--color-green-tint); color: var(--color-primary-green-hover); }
+.status-cancelled { background-color: #fee2e2; color: #b91c1c; }
+
+.status-select {
+    padding: 0.4rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.discount-manager-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.discount-btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}

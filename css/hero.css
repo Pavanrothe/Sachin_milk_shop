@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Airavat Enterprises — Hero Section Styling (hero.css)
+   ========================================================================== */
+
+.hero-section {
+    position: relative;
+    padding-top: calc(var(--nav-height) + 4rem);
+    padding-bottom: 6rem;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.hero-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.circle-blue {
+    width: 480px;
+    height: 480px;
+    background-color: var(--color-blue-tint);
+    top: -120px;
+    left: -120px;
+    animation: pulseBlob 8s ease-in-out infinite alternate;
+}
+
+.circle-green {
+    width: 440px;
+    height: 440px;
+    background-color: var(--color-green-tint);
+    bottom: -60px;
+    right: -60px;
+    animation: pulseBlob 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pulseBlob {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(20px, 20px); }
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-green-tint);
+    color: var(--color-primary-green-hover);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.hero-title {
+    font-size: 3.3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2.25rem;
+    max-width: 540px;
+}
+
+.hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-features {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.feature-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.hero-img-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: visible;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
+.floating-badge {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-md);
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+}
+
+.badge-1 {
+    top: -22px;
+    left: -22px;
+    animation: floatAnim 5s ease-in-out infinite alternate;
+}
+
+.badge-2 {
+    bottom: -22px;
+    right: -22px;
+    animation: floatAnim 6s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-12px); }
+}
+
+.badge-symbol {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: var(--color-green-tint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.badge-title {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.badge-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}

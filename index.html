@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Airavat Enterprises — 100% Pure, Organic & Fresh Dairy Products delivered to your doorstep. Shop fresh Milk, Curd, Butter, Paneer, Cheese, and Pure Ghee.">
+    <title>Airavat Enterprises — Farm Fresh Dairy & Owner Dashboard</title>
+
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Master CSS Importer & Modular Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="nav-logo" aria-label="Airavat Enterprises Home">
+                <span class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8 7 4 11 4 15C4 19.4183 7.58172 23 12 23C16.4183 23 20 19.4183 20 15C20 11 16 7 12 2Z" fill="url(#milk-grad)" />
+                        <path d="M9 15C9 13.3431 10.3431 12 12 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="milk-grad" x1="4" y1="2" x2="20" y2="23" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0284c7"/>
+                                <stop offset="1" stop-color="#10b981"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="logo-text">Airavat <span class="highlight">Enterprises</span></span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#owner-dashboard" class="nav-link owner-link" id="nav-owner-link" onclick="openOwnerPortal()">🔐 Owner Portal</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions (Cart, Owner Switch, & Mobile Hamburger) -->
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart-btn" aria-label="Shopping Cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                
+                <button class="btn btn-outline owner-btn-nav" onclick="openOwnerPortal()">
+                    <span>Owner Login</span>
+                </button>
+
+                <a href="#products" class="btn btn-primary nav-cta">Shop Now</a>
+
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ==========================================
+             HERO SECTION
+             ========================================== -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-circle circle-blue"></div>
+            <div class="hero-bg-circle circle-green"></div>
+
+            <div class="container hero-container">
+                <!-- Left Text Content -->
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="badge-icon">🌱</span>
+                        <span>100% Pure & Farm Fresh Dairy</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Nourishing Families with <span class="text-blue">Pure</span> & <span class="text-green">Fresh Dairy</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Airavat Enterprises brings wholesome, organic, and untouched dairy straight from our green pastures to your breakfast table every single morning.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#products" class="btn btn-primary btn-lg">
+                            <span>Shop Now</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#about" class="btn btn-secondary btn-lg">
+                            <span>Our Story</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Selling Points Badges -->
+                    <div class="hero-features">
+                        <div class="feature-badge">
+                            <span class="feat-icon">🥛</span>
+                            <span>Zero Preservatives</span>
+                        </div>
+                        <div class="feature-badge">
+                            <span class="feat-icon">🚚</span>
+                            <span>Daily Sunrise Delivery</span>
+                        </div>
+                        <div class="feature-badge">
+                            <span class="feat-icon">🔬</span>
+                            <span>Lab Tested Purity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Image -->
+                <div class="hero-visual">
+                    <div class="hero-img-card">
+                        <img src="assets/dairy/hero.jpg" alt="Airavat Enterprises Fresh Dairy Products" class="hero-img">
+                        <div class="floating-badge badge-1">
+                            <div class="badge-symbol">✨</div>
+                            <div>
+                                <strong class="badge-title">Guaranteed Freshness</strong>
+                                <span class="badge-sub">Direct From Farm</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <div class="badge-symbol">⭐</div>
+                            <div>
+                                <strong class="badge-title">4.9/5 Rating</strong>
+                                <span class="badge-sub">10,000+ Happy Families</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             ABOUT SECTION
+             ========================================== -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">ABOUT AIRAVAT ENTERPRISES</span>
+                    <h2 class="section-title">Committed to <span class="text-blue">Purity</span>, <span class="text-green">Health</span> & Tradition</h2>
+                    <p class="section-description">
+                        Founded with a mission to eliminate artificial additives, Airavat Enterprises processes pure dairy under the highest hygienic standards to safeguard your family's health.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon-wrapper icon-blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title">100% Unadulterated</h3>
+                        <p class="about-card-text">
+                            Our milk contains no added water, milk powder, or synthetic hormones. What you receive is pure, natural goodness.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon-wrapper icon-green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title">Grass-Fed Healthy Cows</h3>
+                        <p class="about-card-text">
+                            Our cattle graze freely in green open pastures and are fed organic, nutrient-dense natural fodder for superior milk quality.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon-wrapper icon-blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title">Cold-Chain Delivery</h3>
+                        <p class="about-card-text">
+                            Maintained at strict 4°C temperature throughout transit to ensure optimal freshness right to your doorstep.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon-wrapper icon-green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title">Rigorous Quality Checks</h3>
+                        <p class="about-card-text">
+                            Every batch undergoes 20+ quality parameters checks before packaging to guarantee absolute food safety.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             PRODUCTS SECTION (CUSTOMER STOREFRONT GRID)
+             ========================================== -->
+        <section class="section products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">OUR FRESH DAIRY RANGE</span>
+                    <h2 class="section-title">Explore Airavat <span class="text-green">Premium Products</span></h2>
+                    <p class="section-description">
+                        From rich farm milk to artisanal paneer and pure desi ghee, explore our wholesome dairy items.
+                    </p>
+                </div>
+
+                <!-- Product Filters & Search Toolbar -->
+                <div class="product-toolbar">
+                    <div class="filter-tabs" id="filter-tabs">
+                        <button class="filter-btn active" data-category="all">All Products</button>
+                        <button class="filter-btn" data-category="milk-curd">Milk & Curd</button>
+                        <button class="filter-btn" data-category="butter-ghee">Butter & Ghee</button>
+                        <button class="filter-btn" data-category="paneer-cheese">Paneer & Cheese</button>
+                    </div>
+                    <div class="search-box">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="product-search" placeholder="Search dairy items...">
+                    </div>
+                </div>
+
+                <!-- Pre-rendered Products Container (Instantly Visible & Dynamic JS Sync) -->
+                <div class="products-grid" id="products-grid">
+                    <div class="product-card" data-category="milk-curd" data-id="p1" data-name="Pure Farm Milk">
+                        <div class="product-img-box" onclick="openQuickView('p1')">
+                            <img src="assets/dairy/milk.jpg" alt="Pure Farm Milk" class="product-img" onerror="this.src='assets/dairy/milk.jpg'">
+                            <span class="product-tag tag-blue">Best Seller</span>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name" onclick="openQuickView('p1')">Pure Farm Milk</h3>
+                                <span class="product-size">1 Litre</span>
+                            </div>
+                            <p class="product-desc">Farm fresh, pasteurized full-cream cow milk. Sourced directly from grass-fed cows, untouched by hand.</p>
+                            <div class="product-footer">
+                                <div class="product-price-wrapper">
+                                    <div class="product-price"><span class="price-currency">₹</span><span class="price-value">65</span></div>
+                                </div>
+                                <button class="btn btn-outline add-cart-btn" onclick="addToCart('p1', 1)"><span>Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="milk-curd" data-id="p2" data-name="Fresh Creamy Curd">
+                        <div class="product-img-box" onclick="openQuickView('p2')">
+                            <img src="assets/dairy/curd.jpg" alt="Fresh Creamy Curd" class="product-img" onerror="this.src='assets/dairy/curd.jpg'">
+                            <span class="product-tag tag-blue">Probiotic</span>
+                            <span class="discount-pill-tag">10% OFF</span>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name" onclick="openQuickView('p2')">Fresh Creamy Curd</h3>
+                                <span class="product-size">500g</span>
+                            </div>
+                            <p class="product-desc">Thick, creamy, and probiotic-rich Dahi prepared naturally using traditional fermentation.</p>
+                            <div class="product-footer">
+                                <div class="product-price-wrapper">
+                                    <span class="price-original-struck">₹50</span>
+                                    <div class="product-price"><span class="price-currency">₹</span><span class="price-value">45</span></div>
+                                </div>
+                                <button class="btn btn-outline add-cart-btn" onclick="addToCart('p2', 1)"><span>Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="butter-ghee" data-id="p3" data-name="Desi White Butter">
+                        <div class="product-img-box" onclick="openQuickView('p3')">
+                            <img src="assets/dairy/butter.jpg" alt="Desi White Butter" class="product-img" onerror="this.src='assets/dairy/butter.jpg'">
+                            <span class="product-tag tag-blue">Traditional</span>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name" onclick="openQuickView('p3')">Desi White Butter</h3>
+                                <span class="product-size">250g</span>
+                            </div>
+                            <p class="product-desc">Traditional churned un-salted Makhan with rich authentic aroma. Free from artificial colors.</p>
+                            <div class="product-footer">
+                                <div class="product-price-wrapper">
+                                    <div class="product-price"><span class="price-currency">₹</span><span class="price-value">120</span></div>
+                                </div>
+                                <button class="btn btn-outline add-cart-btn" onclick="addToCart('p3', 1)"><span>Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="paneer-cheese" data-id="p4" data-name="Fresh Soft Paneer">
+                        <div class="product-img-box" onclick="openQuickView('p4')">
+                            <img src="assets/dairy/paneer.jpg" alt="Fresh Soft Paneer" class="product-img" onerror="this.src='assets/dairy/paneer.jpg'">
+                            <span class="product-tag tag-blue">High Protein</span>
+                            <span class="discount-pill-tag">15% OFF</span>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name" onclick="openQuickView('p4')">Fresh Soft Paneer</h3>
+                                <span class="product-size">200g</span>
+                            </div>
+                            <p class="product-desc">Super soft, melt-in-mouth cottage cheese blocks handcrafted from pure cow milk.</p>
+                            <div class="product-footer">
+                                <div class="product-price-wrapper">
+                                    <span class="price-original-struck">₹130</span>
+                                    <div class="product-price"><span class="price-currency">₹</span><span class="price-value">110</span></div>
+                                </div>
+                                <button class="btn btn-outline add-cart-btn" onclick="addToCart('p4', 1)"><span>Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="paneer-cheese" data-id="p5" data-name="Natural Farm Cheese">
+                        <div class="product-img-box" onclick="openQuickView('p5')">
+                            <img src="assets/dairy/cheese.jpg" alt="Natural Farm Cheese" class="product-img" onerror="this.src='assets/dairy/cheese.jpg'">
+                            <span class="product-tag tag-blue">Artisanal</span>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name" onclick="openQuickView('p5')">Natural Farm Cheese</h3>
+                                <span class="product-size">200g</span>
+                            </div>
+                            <p class="product-desc">Delicious, naturally aged farm cheese slices with a rich mild flavor.</p>
+                            <div class="product-footer">
+                                <div class="product-price-wrapper">
+                                    <div class="product-price"><span class="price-currency">₹</span><span class="price-value">150</span></div>
+                                </div>
+                                <button class="btn btn-outline add-cart-btn" onclick="addToCart('p5', 1)"><span>Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="butter-ghee" data-id="p6" data-name="Pure Cow Ghee">
+                        <div class="product-img-box" onclick="openQuickView('p6')">
+                            <img src="assets/dairy/ghee.jpg" alt="Pure Cow Ghee" class="product-img" onerror="this.src='assets/dairy/ghee.jpg'">
+                            <span class="product-tag tag-blue">A2 Quality</span>
+                            <span class="discount-pill-tag">7% OFF</span>
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-header">
+                                <h3 class="product-name" onclick="openQuickView('p6')">Pure Cow Ghee</h3>
+                                <span class="product-size">1 Litre</span>
+                            </div>
+                            <p class="product-desc">Golden, granular, highly aromatic pure cow ghee made using traditional Bilona method.</p>
+                            <div class="product-footer">
+                                <div class="product-price-wrapper">
+                                    <span class="price-original-struck">₹700</span>
+                                    <div class="product-price"><span class="price-currency">₹</span><span class="price-value">651</span></div>
+                                </div>
+                                <button class="btn btn-outline add-cart-btn" onclick="addToCart('p6', 1)"><span>Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Found Indicator -->
+                <div id="no-products-found" class="no-results hidden">
+                    <p>🔍 No matching dairy products found.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             STRICT SHOPOWNER DASHBOARD (ADMIN PANEL)
+             ========================================== -->
+        <section class="section owner-dashboard-section hidden" id="owner-dashboard">
+            <div class="container">
+                <div class="owner-header-bar">
+                    <div>
+                        <span class="badge-pill-admin">🔐 SHOPOWNER CONTROL PANEL</span>
+                        <h2 class="owner-header-title">Store Operations & Inventory Manager</h2>
+                        <p class="owner-header-subtitle">Strictly for Airavat Enterprises Shop Owner Management.</p>
+                    </div>
+                    <div class="owner-header-actions">
+                        <button class="btn btn-secondary btn-sm" onclick="closeOwnerDashboard()">Exit Dashboard View</button>
+                        <button class="btn btn-danger btn-sm" onclick="logoutOwner()">Logout Owner</button>
+                    </div>
+                </div>
+
+                <!-- Analytics Metrics Overview -->
+                <div class="owner-stats-grid">
+                    <div class="owner-stat-card">
+                        <div class="stat-icon-bg icon-blue">💰</div>
+                        <div>
+                            <span class="stat-title">Total Revenue</span>
+                            <h3 class="stat-value" id="admin-total-revenue">₹0</h3>
+                        </div>
+                    </div>
+                    <div class="owner-stat-card">
+                        <div class="stat-icon-bg icon-green">📋</div>
+                        <div>
+                            <span class="stat-title">Total Orders</span>
+                            <h3 class="stat-value" id="admin-total-orders">0</h3>
+                        </div>
+                    </div>
+                    <div class="owner-stat-card">
+                        <div class="stat-icon-bg icon-blue">📦</div>
+                        <div>
+                            <span class="stat-title">Products In Store</span>
+                            <h3 class="stat-value" id="admin-total-products">0</h3>
+                        </div>
+                    </div>
+                    <div class="owner-stat-card">
+                        <div class="stat-icon-bg icon-green">🏷️</div>
+                        <div>
+                            <span class="stat-title">Discounted Items</span>
+                            <h3 class="stat-value" id="admin-discounted-count">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Action Tabs -->
+                <div class="owner-tabs">
+                    <button class="owner-tab-btn active" onclick="switchOwnerTab('manage-products')">📦 Manage Products & Prices</button>
+                    <button class="owner-tab-btn" onclick="switchOwnerTab('add-product')">➕ Add New Product</button>
+                    <button class="owner-tab-btn" onclick="switchOwnerTab('manage-orders')">📋 Orders & Delivery (<span id="admin-orders-badge">0</span>)</button>
+                    <button class="owner-tab-btn" onclick="switchOwnerTab('discounts-promo')">🏷️ Manage Discounts</button>
+                </div>
+
+                <!-- TAB 1: MANAGE PRODUCTS & PRICE EDITING -->
+                <div class="owner-tab-content" id="tab-manage-products">
+                    <div class="card-box">
+                        <div class="card-box-header">
+                            <h3>Store Inventory & Pricing Control</h3>
+                            <p>Edit prices, update discount percentages, or remove items from the live store.</p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Category</th>
+                                        <th>Original Price</th>
+                                        <th>Discount %</th>
+                                        <th>Final Price</th>
+                                        <th>Stock</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-products-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: ADD NEW PRODUCT FORM (WITH PHYSICAL DEVICE FILE UPLOAD & PRESETS) -->
+                <div class="owner-tab-content hidden" id="tab-add-product">
+                    <div class="card-box max-w-750">
+                        <div class="card-box-header">
+                            <h3>Add New Dairy Product to Store</h3>
+                            <p>Newly added products immediately appear on the live storefront.</p>
+                        </div>
+                        <form id="admin-add-product-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="new-p-name">Product Name <span class="required">*</span></label>
+                                    <input type="text" id="new-p-name" class="form-control" placeholder="e.g. Fresh Malai Cottage Cheese" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-p-category">Category <span class="required">*</span></label>
+                                    <select id="new-p-category" class="form-control" required>
+                                        <option value="milk-curd">Milk & Curd</option>
+                                        <option value="butter-ghee">Butter & Ghee</option>
+                                        <option value="paneer-cheese">Paneer & Cheese</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="new-p-price">Original Price (₹) <span class="required">*</span></label>
+                                    <input type="number" id="new-p-price" class="form-control" placeholder="e.g. 150" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-p-discount">Discount Percentage (%)</label>
+                                    <input type="number" id="new-p-discount" class="form-control" placeholder="e.g. 10 (0 for no discount)" min="0" max="90" value="0">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="new-p-size">Pack Size / Weight <span class="required">*</span></label>
+                                    <input type="text" id="new-p-size" class="form-control" placeholder="e.g. 500g or 1 Litre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-p-stock">Initial Stock Quantity <span class="required">*</span></label>
+                                    <input type="number" id="new-p-stock" class="form-control" placeholder="e.g. 50" min="1" value="50" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new-p-tag">Product Tag / Badge</label>
+                                <input type="text" id="new-p-tag" class="form-control" placeholder="e.g. Organic, Fresh, Special Offer">
+                            </div>
+
+                            <!-- 📱 PHYSICAL DEVICE FILE UPLOAD INPUT -->
+                            <div class="form-group highlight-upload-group">
+                                <label for="new-p-img-file">📁 Upload Photo from Your Device (Computer / Phone Gallery)</label>
+                                <input type="file" id="new-p-img-file" class="form-control file-input-control" accept="image/*" onchange="handleDeviceImageUpload(event)">
+                                <small class="text-muted" style="margin-top: 0.2rem; display: block;">Supports JPG, PNG, WEBP from your gallery or local folder.</small>
+                            </div>
+
+                            <!-- Alternative URL & Presets -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="new-p-img-url">-- Or Paste Web Image URL --</label>
+                                    <input type="url" id="new-p-img-url" class="form-control" placeholder="https://example.com/photo.jpg" oninput="updateAddProductImagePreview()">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="new-p-img-preset">-- Or Select Stock Photo --</label>
+                                    <select id="new-p-img-preset" class="form-control" onchange="updateAddProductImagePreview()">
+                                        <option value="" selected>Choose preset photo...</option>
+                                        <option value="assets/dairy/milk.jpg">Milk Bottle Image</option>
+                                        <option value="assets/dairy/curd.jpg">Curd Pot Image</option>
+                                        <option value="assets/dairy/butter.jpg">Butter Block Image</option>
+                                        <option value="assets/dairy/paneer.jpg">Paneer Cubes Image</option>
+                                        <option value="assets/dairy/cheese.jpg">Cheese Slice Image</option>
+                                        <option value="assets/dairy/ghee.jpg">Ghee Jar Image</option>
+                                        <option value="assets/dairy/hero.jpg">Farm Dairy Hero Image</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Live Image Preview Container -->
+                            <div class="img-preview-box" id="new-p-img-preview-container">
+                                <span>Selected Image Preview:</span>
+                                <img id="new-p-img-preview" src="assets/dairy/milk.jpg" alt="Preview Image" class="img-preview-thumb">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new-p-desc">Product Description <span class="required">*</span></label>
+                                <textarea id="new-p-desc" rows="3" class="form-control" placeholder="Enter detailed description, ingredients, purity standards..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>➕ Publish Product to Store</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- TAB 3: MANAGE CUSTOMER ORDERS -->
+                <div class="owner-tab-content hidden" id="tab-manage-orders">
+                    <div class="card-box">
+                        <div class="card-box-header">
+                            <h3>Incoming Customer Orders</h3>
+                            <p>Track order status, manage delivery schedules, and process payments.</p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date & Time</th>
+                                        <th>Customer Details</th>
+                                        <th>Items Ordered</th>
+                                        <th>Total Amount</th>
+                                        <th>Status</th>
+                                        <th>Change Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-orders-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: BULK DISCOUNTS & PROMOTIONS -->
+                <div class="owner-tab-content hidden" id="tab-discounts-promo">
+                    <div class="card-box max-w-750">
+                        <div class="card-box-header">
+                            <h3>Apply Storewide or Category Discounts</h3>
+                            <p>Give instant discounts across specific dairy categories.</p>
+                        </div>
+                        <div class="discount-manager-box">
+                            <div class="form-group">
+                                <label for="bulk-category">Select Target Category</label>
+                                <select id="bulk-category" class="form-control">
+                                    <option value="all">All Products in Store</option>
+                                    <option value="milk-curd">Milk & Curd</option>
+                                    <option value="butter-ghee">Butter & Ghee</option>
+                                    <option value="paneer-cheese">Paneer & Cheese</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bulk-discount-pct">Set Discount Percentage (%)</label>
+                                <input type="number" id="bulk-discount-pct" class="form-control" placeholder="e.g. 15" min="0" max="80">
+                            </div>
+                            <div class="discount-btn-group">
+                                <button class="btn btn-primary" onclick="applyBulkDiscount()">Apply Discount</button>
+                                <button class="btn btn-secondary" onclick="resetAllDiscounts()">Reset All Discounts to 0%</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             CONTACT & ORDER SECTION
+             ========================================== -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">GET IN TOUCH / ORDER ONLINE</span>
+                    <h2 class="section-title">Order Fresh or <span class="text-blue">Ask Questions</span></h2>
+                    <p class="section-description">
+                        Fill out your details below to place your order or request a daily sunrise subscription.
+                    </p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Left Info Box -->
+                    <div class="contact-info">
+                        <div class="info-card clickable" onclick="copyContactInfo('phone', '+91 9579327984')">
+                            <div class="info-icon icon-blue">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="info-label">Customer Helpline (Click to Copy)</h4>
+                                <p class="info-value">+91 9579327984</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card clickable" onclick="copyContactInfo('email', 'support@airavatenterprises.com')">
+                            <div class="info-icon icon-green">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="info-label">Email Support (Click to Copy)</h4>
+                                <p class="info-value">pavan@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card location-card">
+                            <div class="location-content">
+                                <div class="info-icon icon-blue">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="info-label">Dairy Farm Estate</h4>
+                                    <p class="info-value">Airavat Dairy chh.Sambhajinagar <br>chh.Sambhajinagar 411001</p>
+                                </div>
+                            </div>
+
+                            <iframe
+                                class="map-embed"
+                                src="https://www.google.com/maps?q=Airavat%20Dairy%20chh.%20Sambhajinagar%20411001&output=embed"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Airavat Dairy Location Map"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div class="delivery-time-box">
+                            <span class="clock-icon">⏰</span>
+                            <div>
+                                <strong>Delivery Schedule:</strong>
+                                <p>Everyday from 5:30 AM to 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Box -->
+                    <div class="contact-form-card">
+                        <form id="contact-form" novalidate>
+                            <div id="form-alert" class="form-alert hidden"></div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullname">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="fullname" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                                    <span class="error-text">Please enter your name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="e.g. 9876543210" required>
+                                    <span class="error-text">Please enter valid 10-digit mobile number</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="product-select">Select Primary Interest / Cart Pre-fill</label>
+                                <select id="product-select" class="form-control">
+                                    <option value="" disabled selected>Choose a Product or Order Mode</option>
+                                    <option value="cart">Items in My Shopping Cart</option>
+                                    <option value="milk">Pure Farm Milk (Daily Subscription)</option>
+                                    <option value="curd">Fresh Creamy Curd</option>
+                                    <option value="butter">Desi White Butter</option>
+                                    <option value="paneer">Fresh Soft Paneer</option>
+                                    <option value="cheese">Natural Farm Cheese</option>
+                                    <option value="ghee">Pure Cow Ghee</option>
+                                    <option value="bulk">Bulk / Distributorship Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Delivery Address / Special Instructions <span class="required">*</span></label>
+                                <textarea id="message" rows="4" class="form-control" placeholder="Enter full delivery address, house number, area pin code..." required></textarea>
+                                <span class="error-text">Please enter your address or details</span>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                                <span>Place Order / Send Request</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         SHOPPING CART SLIDE-OVER DRAWER
+         ========================================== -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+        <div class="cart-drawer-header">
+            <div class="cart-header-title">
+                <h3>Shopping Cart</h3>
+                <span class="cart-badge-inline" id="drawer-cart-count">0 items</span>
+            </div>
+            <button class="close-btn" id="close-cart-btn" aria-label="Close Cart">&times;</button>
+        </div>
+
+        <div class="cart-drawer-body" id="cart-items-container">
+            <div class="empty-cart-state" id="empty-cart-state">
+                <span class="empty-icon">🥛</span>
+                <h4>Your cart is empty</h4>
+                <p>Browse our farm fresh dairy items and add them to your cart.</p>
+                <a href="#products" class="btn btn-secondary btn-sm" onclick="closeCartDrawer()">Start Shopping</a>
+            </div>
+            <div class="cart-items-list hidden" id="cart-items-list"></div>
+        </div>
+
+        <div class="cart-drawer-footer hidden" id="cart-summary-footer">
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">₹0</span>
+            </div>
+            <div class="summary-line">
+                <span>Delivery Charge</span>
+                <span class="text-green">FREE (Sunrise Delivery)</span>
+            </div>
+            <div class="summary-line total-line">
+                <strong>Total Amount</strong>
+                <strong id="cart-total" class="text-blue">₹0</strong>
+            </div>
+
+            <div class="cart-drawer-actions">
+                <button class="btn btn-primary btn-block" onclick="proceedToCheckoutFromCart()">Proceed to Checkout</button>
+                <button class="btn-text-danger" onclick="clearFullCart()">Clear Cart</button>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ==========================================
+         PRODUCT QUICK VIEW MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="quick-view-overlay">
+        <div class="modal-card" id="quick-view-modal">
+            <button class="modal-close" onclick="closeQuickView()">&times;</button>
+            <div class="modal-body" id="quick-view-content"></div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         OWNER AUTHENTICATION LOGIN MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="owner-login-overlay">
+        <div class="modal-card receipt-card">
+            <button class="modal-close" onclick="closeOwnerLoginModal()">&times;</button>
+            <div class="receipt-header">
+                <div class="receipt-icon">🔐</div>
+                <h3>Shopowner Verification</h3>
+                <p>Enter owner passcode to access store operations dashboard.</p>
+            </div>
+            <form id="owner-login-form" onsubmit="handleOwnerLogin(event)">
+                <div class="form-group" style="text-align: left;">
+                    <label for="owner-passcode">Owner Security Passcode</label>
+                    <input type="password" id="owner-passcode" class="form-control" placeholder="Enter passcode" required>
+                    <!--<span class="error-text" id="passcode-error">Incorrect passcode! Default demo passcode is: admin123</span>-->
+                </div>
+                <!--<div style="background-color: var(--color-blue-tint); padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.82rem; margin-bottom: 1rem; color: var(--color-primary-blue);">
+                    💡 <strong>Default Demo Passcode:</strong> <code>admin123</code>
+                </div>-->
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span>Unlock Dashboard</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         EDIT PRODUCT PRICE/DISCOUNT & PHOTO MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="edit-product-overlay">
+        <div class="modal-card receipt-card">
+            <button class="modal-close" onclick="closeEditProductModal()">&times;</button>
+            <div class="receipt-header">
+                <div class="receipt-icon">🏷️</div>
+                <h3>Edit Product Details</h3>
+                <p id="edit-product-subtitle">Update pricing and photo for dairy item</p>
+            </div>
+            <form id="edit-product-form" onsubmit="saveProductEdit(event)">
+                <input type="hidden" id="edit-p-id">
+                <div class="form-group" style="text-align: left;">
+                    <label for="edit-p-price">Original Price (₹)</label>
+                    <input type="number" id="edit-p-price" class="form-control" min="1" required>
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="edit-p-discount">Discount Percentage (%)</label>
+                    <input type="number" id="edit-p-discount" class="form-control" min="0" max="90" required>
+                </div>
+                <div class="form-group" style="text-align: left;">
+                    <label for="edit-p-stock">Current Stock Quantity</label>
+                    <input type="number" id="edit-p-stock" class="form-control" min="0" required>
+                </div>
+                
+                <!-- Physical File Upload for Edit Product -->
+                <div class="form-group highlight-upload-group" style="text-align: left;">
+                    <label for="edit-p-img-file">📁 Change Photo from Device File</label>
+                    <input type="file" id="edit-p-img-file" class="form-control file-input-control" accept="image/*" onchange="handleEditDeviceImageUpload(event)">
+                </div>
+
+                <div class="form-group" style="text-align: left;">
+                    <label for="edit-p-img">-- Or Custom Image URL --</label>
+                    <input type="text" id="edit-p-img" class="form-control" placeholder="https://example.com/photo.jpg or assets/dairy/milk.jpg">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span>Save Changes</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         ORDER CONFIRMATION RECEIPT MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="order-modal-overlay">
+        <div class="modal-card receipt-card">
+            <button class="modal-close" onclick="closeOrderModal()">&times;</button>
+            <div class="receipt-header">
+                <div class="receipt-icon">🎉</div>
+                <h3>Order Confirmed!</h3>
+                <p>Thank you for choosing Airavat Enterprises</p>
+                <span class="order-id-tag" id="receipt-order-id">#AIR-0000</span>
+            </div>
+
+            <div class="receipt-body">
+                <div class="receipt-row">
+                    <span>Customer Name:</span>
+                    <strong id="receipt-name">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Phone Number:</span>
+                    <strong id="receipt-phone">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Delivery Time:</span>
+                    <strong class="text-green">Tomorrow 5:30 AM - 7:30 PM</strong>
+                </div>
+
+                <div class="receipt-divider"></div>
+
+                <h4 class="receipt-subtitle">Order Details</h4>
+                <div id="receipt-items-list" class="receipt-items-list"></div>
+
+                <div class="receipt-divider"></div>
+
+                <div class="receipt-row receipt-total-row">
+                    <span>Total Amount Paid:</span>
+                    <strong id="receipt-total" class="text-blue">₹0</strong>
+                </div>
+            </div>
+
+            <div class="receipt-footer">
+                <button class="btn btn-primary btn-block" onclick="window.print()">Print Receipt</button>
+                <button class="btn btn-secondary btn-block" onclick="closeOrderModal()">Done</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="nav-logo">
+                    <span class="logo-text">Airavat <span class="highlight">Enterprises</span></span>
+                </a>
+                <p class="footer-tagline">
+                    Bringing pure, natural, and hygienic dairy products straight from our green pastures to your family.
+                </p>
+
+                <!--<div class="footer-newsletter">
+                    ##### Subscribe for Daily Farm Updates
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email" required class="newsletter-input">
+                        <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                    </form>
+                </div>-->
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#owner-dashboard" onclick="openOwnerPortal()">Shop Owner Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-heading">Dairy Range</h5>
+                    <ul>
+                        <li><a href="#products" onclick="filterByCategory('milk-curd')">Pure Farm Milk</a></li>
+                        <li><a href="#products" onclick="filterByCategory('milk-curd')">Fresh Curd</a></li>
+                        <li><a href="#products" onclick="filterByCategory('butter-ghee')">Desi Butter</a></li>
+                        <li><a href="#products" onclick="filterByCategory('paneer-cheese')">Fresh Paneer</a></li>
+                        <li><a href="#products" onclick="filterByCategory('butter-ghee')">Pure Cow Ghee</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Airavat Enterprises. All Rights Reserved.</p>
+                <p class="tag-fresh">🌱 Pure • Fresh • Organic</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- Modular JavaScript Files -->
+    <script src="js/data.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/owner.js"></script>
+
+    <!-- Main Bootstrapper Script -->
+    <script src="script.js"></script>
+</body>
+</html>
