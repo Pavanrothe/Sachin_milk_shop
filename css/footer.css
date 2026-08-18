@@ -125,3 +125,187 @@
     background-color: var(--color-primary-blue-hover);
     transform: translateY(-3px);
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN - TABLET (max-width: 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+
+    .back-to-top {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 3rem;
+    }
+
+    .footer-container {
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .footer-heading {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+    }
+
+    .footer-newsletter {
+        margin-top: 1rem;
+    }
+
+    .footer-newsletter h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .newsletter-input {
+        padding: 0.6rem 0.85rem;
+        font-size: 0.85rem;
+        min-height: 44px;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-col ul li a {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        padding: 1rem 0;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .back-to-top {
+        bottom: 1.25rem;
+        left: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - SMALL MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    .footer {
+        padding-top: 2.5rem;
+    }
+
+    .footer-container {
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer-heading {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        max-width: 100%;
+    }
+
+    .footer-newsletter {
+        margin-top: 0.75rem;
+    }
+
+    .footer-newsletter h5 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+
+    .newsletter-input {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        min-height: 40px;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-col ul li a {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        padding: 0.75rem 0;
+    }
+
+    .footer-bottom-content {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        left: auto;
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+}

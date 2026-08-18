@@ -323,3 +323,364 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN - TABLET (max-width: 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+    .cart-drawer {
+        max-width: 380px;
+    }
+
+    .modal-card {
+        max-width: 90%;
+        padding: 2rem;
+    }
+
+    .quick-view-grid {
+        gap: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
+    }
+
+    .modal-price {
+        font-size: 1.35rem;
+    }
+
+    .nutrition-table {
+        font-size: 0.8rem;
+    }
+
+    .nutrition-table th, .nutrition-table td {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .toast-container {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .cart-drawer {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cart-drawer-header {
+        padding: 1.25rem;
+    }
+
+    .cart-drawer-body {
+        padding: 1.25rem;
+    }
+
+    .cart-drawer-footer {
+        padding: 1.25rem;
+    }
+
+    .cart-item-row {
+        gap: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .cart-item-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .cart-item-title {
+        font-size: 0.9rem;
+    }
+
+    .cart-item-price {
+        font-size: 0.8rem;
+    }
+
+    .summary-line {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .total-line {
+        font-size: 1.05rem;
+    }
+
+    .modal-overlay {
+        padding: 1rem;
+    }
+
+    .modal-card {
+        max-width: 100%;
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+    }
+
+    .modal-close {
+        top: 1rem;
+        right: 1rem;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+
+    .quick-view-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .modal-img {
+        max-height: 300px;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+    }
+
+    .modal-price-size {
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .modal-price {
+        font-size: 1.2rem;
+    }
+
+    .modal-desc {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .nutrition-table {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .nutrition-table th, .nutrition-table td {
+        padding: 0.3rem 0.4rem;
+    }
+
+    .receipt-card {
+        max-width: 90%;
+    }
+
+    .receipt-body {
+        padding: 1rem;
+    }
+
+    .receipt-row {
+        font-size: 0.85rem;
+    }
+
+    .receipt-total-row {
+        font-size: 1rem;
+    }
+
+    .receipt-footer {
+        gap: 0.75rem;
+    }
+
+    .receipt-footer .btn {
+        flex: 1;
+        padding: 0.65rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .toast-container {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+    }
+
+    .toast {
+        padding: 0.75rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .empty-icon {
+        font-size: 3rem;
+    }
+
+    .empty-cart-state {
+        padding: 3rem 1rem;
+    }
+
+    .cart-drawer-actions {
+        gap: 0.5rem;
+    }
+
+    .cart-drawer-actions .btn {
+        width: 100%;
+        padding: 0.65rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - SMALL MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    .cart-drawer {
+        max-width: 100%;
+    }
+
+    .cart-drawer-header {
+        padding: 1rem;
+    }
+
+    .cart-drawer-body {
+        padding: 1rem;
+    }
+
+    .cart-drawer-footer {
+        padding: 1rem;
+    }
+
+    .cart-header-title {
+        gap: 0.5rem;
+    }
+
+    .cart-badge-inline {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .close-btn {
+        font-size: 1.5rem;
+    }
+
+    .cart-item-row {
+        gap: 0.65rem;
+        padding-bottom: 0.65rem;
+    }
+
+    .cart-item-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    .cart-item-title {
+        font-size: 0.85rem;
+    }
+
+    .cart-item-price {
+        font-size: 0.75rem;
+    }
+
+    .cart-qty-ctrl {
+        gap: 0.35rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .qty-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 0.8rem;
+    }
+
+    .qty-num {
+        font-size: 0.75rem;
+    }
+
+    .summary-line {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .total-line {
+        font-size: 0.95rem;
+    }
+
+    .modal-overlay {
+        padding: 0.75rem;
+    }
+
+    .modal-card {
+        max-width: 100%;
+        padding: 1.25rem;
+    }
+
+    .modal-close {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-price {
+        font-size: 1.05rem;
+    }
+
+    .modal-desc {
+        font-size: 0.85rem;
+    }
+
+    .nutrition-table {
+        font-size: 0.7rem;
+    }
+
+    .receipt-card {
+        max-width: 100%;
+    }
+
+    .receipt-body {
+        padding: 0.9rem;
+    }
+
+    .receipt-row {
+        font-size: 0.8rem;
+    }
+
+    .receipt-icon {
+        font-size: 2.5rem;
+    }
+
+    .order-id-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .receipt-footer {
+        gap: 0.5rem;
+    }
+
+    .receipt-footer .btn {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.75rem;
+        min-height: 40px;
+    }
+
+    .toast-container {
+        bottom: 0.75rem;
+        right: 0.75rem;
+        left: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .toast {
+        padding: 0.65rem 1rem;
+        font-size: 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .cart-drawer-actions {
+        gap: 0.4rem;
+    }
+
+    .cart-drawer-actions .btn {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.8rem;
+        min-height: 40px;
+    }
+}
